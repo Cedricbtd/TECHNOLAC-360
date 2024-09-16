@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project Title</title>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+<style> @-ms-viewport { width: device-width; } </style>
+<link rel="stylesheet" href="vendor/reset.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="multiple-scenes view-control-buttons">
+
+<div id="pano"></div>
+
+<div id="sceneList">
+  <ul class="scenes">
+    
+      <a href="javascript:void(0)" class="scene" data-id="0-entre-extrieure">
+        <li class="text">Entrée extérieure</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="1-entre-intrieure">
+        <li class="text">Entrée intérieure</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="2-hall">
+        <li class="text">Hall</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="3-couloir-1">
+        <li class="text">Couloir 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="4-angle-1">
+        <li class="text">Angle 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="5-zone-travaux">
+        <li class="text">Zone Travaux</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="6-couloir-sies">
+        <li class="text">Couloir SIES</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="7-sies">
+        <li class="text">SIES</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="8-flchettes">
+        <li class="text">Fléchettes</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="9-vers-siai">
+        <li class="text">Vers SIAI</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="10-siai-zone-1">
+        <li class="text">SIAI zone 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="11-couloir-siai-1">
+        <li class="text">Couloir SIAI 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="12-angle-siai-1">
+        <li class="text">Angle SIAI 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="13-couloir-siai-2">
+        <li class="text">Couloir SIAI 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="14-sortie-siai">
+        <li class="text">Sortie SIAI</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="15-escalier-vers-tage">
+        <li class="text">Escalier vers étage</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="16-etage">
+        <li class="text">Etage</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="17-coin-tage-1">
+        <li class="text">Coin étage 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="18-couloir-tage-1">
+        <li class="text">Couloir étage 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="19-coin-tage-2">
+        <li class="text">Coin étage 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="20-couloir-tage-2">
+        <li class="text">Couloir étage 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="21-couloir-tage-3">
+        <li class="text">Couloir étage 3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="22-coin-tage-3">
+        <li class="text">Coin étage 3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="23-coin-des-livrables">
+        <li class="text">Coin des livrables</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="24-couloir-tage-3">
+        <li class="text">Couloir étage 3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="25-bureau-indus">
+        <li class="text">Bureau indus</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="26-couloir-tage-4">
+        <li class="text">Couloir étage 4</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="27-couloir-tage-5">
+        <li class="text">Couloir étage 5</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="28-entre-rfectoire">
+        <li class="text">Entrée réfectoire</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="29-rfectoire">
+        <li class="text">Réfectoire</li>
+      </a>
+    
+  </ul>
+</div>
+
+<div id="titleBar">
+  <h1 class="sceneName"></h1>
+</div>
+
+<a href="javascript:void(0)" id="autorotateToggle">
+  <img class="icon off" src="img/play.png">
+  <img class="icon on" src="img/pause.png">
+</a>
+
+<a href="javascript:void(0)" id="fullscreenToggle">
+  <img class="icon off" src="img/fullscreen.png">
+  <img class="icon on" src="img/windowed.png">
+</a>
+
+<a href="javascript:void(0)" id="sceneListToggle">
+  <img class="icon off" src="img/expand.png">
+  <img class="icon on" src="img/collapse.png">
+</a>
+
+<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+  <img class="icon" src="img/up.png">
+</a>
+<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+  <img class="icon" src="img/down.png">
+</a>
+<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+  <img class="icon" src="img/left.png">
+</a>
+<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+  <img class="icon" src="img/right.png">
+</a>
+<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+  <img class="icon" src="img/plus.png">
+</a>
+<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+  <img class="icon" src="img/minus.png">
+</a>
+
+<script src="vendor/screenfull.min.js" ></script>
+<script src="vendor/bowser.min.js" ></script>
+<script src="vendor/marzipano.js" ></script>
+
+<script src="data.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
